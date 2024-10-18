@@ -52,4 +52,10 @@ fun BasicColumn(modifier: Modifier = Modifier)  {
         Text("Login",
             fontSize = 100.sp,
             fontWeight = FontWeight.Bold)
+        Spacer(modifier =Modifier.padding(2.dp))
+        Text("ini adalah halaman login",
+            fontSize = 20.sp,
+            fontStyle = FontWeight.ExtraBold)
+        Spacer(modifier = Modifier.padding(5.dp))
+
 
