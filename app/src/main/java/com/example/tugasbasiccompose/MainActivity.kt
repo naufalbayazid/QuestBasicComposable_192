@@ -77,6 +77,9 @@ fun BasicColumn(modifier: Modifier = Modifier) {
         Text(
             "Naufal Ichwan Bayazid",
             fontSize = 20.sp)
+        Text("20220140192",
+            fontSize = 20.sp)
+
         Spacer(modifier = Modifier.padding(5.dp))
         Image(
             painter = painterResource(id = R.drawable.fotoaye),
