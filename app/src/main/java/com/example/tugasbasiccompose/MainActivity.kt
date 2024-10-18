@@ -16,6 +16,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -72,6 +73,11 @@ fun BasicColumn(modifier: Modifier = Modifier)  {
         Text("Naufal Ichwan Bayazid",
             fontSize = 20.sp
         )
+
+        Spacer(modifier = Modifier.padding(5.dp))
+        Image(
+            Painter = painterResource(id = R.drawable.)
+
 
 
 
