@@ -69,6 +69,10 @@ fun BasicColumn(modifier: Modifier = Modifier)  {
             fontSize = 20.sp,
         )
 
+        Text("Naufal Ichwan Bayazid",
+            fontSize = 20.sp
+        )
+
 
 
 
