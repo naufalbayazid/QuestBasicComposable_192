@@ -48,3 +48,5 @@ fun BasicColumn(modifier: Modifier = Modifier)  {
             .fillMaxSize()
             .padding(top = 30.dp)
     ){
+        guvug
+    }
