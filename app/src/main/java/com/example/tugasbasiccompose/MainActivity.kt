@@ -58,6 +58,21 @@ fun BasicColumn(modifier: Modifier = Modifier)  {
             fontStyle = FontWeight.ExtraBold)
         Spacer(modifier = Modifier.padding(5.dp))
 
+        Image(
+            painter = painterResource(id = R.drawable.logo),
+            contentDescription = "",
+            modifier = Modifier
+                .size(200.dp)
+
+        )
+
+
+
+
+    }
+}
+
+
 
 
 
