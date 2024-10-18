@@ -45,6 +45,6 @@ fun BasicColumn(modifier: Modifier = Modifier)  {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
-            .fillMaxSize() 
+            .fillMaxSize()
             .padding(top = 30.dp)
     ){
