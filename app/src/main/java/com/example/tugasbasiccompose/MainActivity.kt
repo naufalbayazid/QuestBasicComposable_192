@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -18,7 +19,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
@@ -32,10 +33,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TugasBasicComposeTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    BasicColumn(modifier =Modifier.padding(innerPadding)
-
-                    )
+                Scaffold(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(Color.Red)
+                ) { innerPadding ->
+                    BasicColumn(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -47,38 +50,43 @@ fun BasicColumn(modifier: Modifier = Modifier) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .padding(top = 30.dp)
+            .background(Color.Red)
     ) {
-
         Text(
             "Login",
             fontSize = 100.sp,
             fontWeight = FontWeight.Bold
         )
         Spacer(modifier = Modifier.padding(2.dp))
-        Text("ini adalah halaman login",
+        Text(
+            "ini adalah halaman login",
             fontSize = 20.sp,
-            fontWeight = FontWeight.ExtraBold)
+            fontWeight = FontWeight.ExtraBold
+        )
         Spacer(modifier = Modifier.padding(5.dp))
 
         Image(
             painter = painterResource(id = R.drawable.logoumy),
             contentDescription = "",
-            modifier = Modifier
-                .size(200.dp)
+            modifier = Modifier.size(200.dp)
         )
         Spacer(modifier = Modifier.padding(2.dp))
         Text(
             "Nama",
-            fontSize = 20.sp,)
+            fontSize = 20.sp
+        )
 
         Text(
             "Naufal Ichwan Bayazid",
-            fontSize = 20.sp)
-        Text("20220140192",
-            fontSize = 20.sp)
+            fontSize = 20.sp
+        )
+        Text(
+            "20220140192",
+            fontSize = 20.sp
+        )
 
         Spacer(modifier = Modifier.padding(5.dp))
         Image(
@@ -89,17 +97,17 @@ fun BasicColumn(modifier: Modifier = Modifier) {
                 .clip(CircleShape)
                 .padding(4.dp)
         )
-
     }
 }
 
 @Preview(showBackground = true)
 @Composable
-fun GreatingPreview(){
+fun GreetingPreview() {
     TugasBasicComposeTheme {
         BasicColumn()
     }
 }
+
 
 
 
