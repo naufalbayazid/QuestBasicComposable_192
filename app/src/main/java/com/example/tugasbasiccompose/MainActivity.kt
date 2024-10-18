@@ -48,5 +48,8 @@ fun BasicColumn(modifier: Modifier = Modifier)  {
             .fillMaxSize()
             .padding(top = 30.dp)
     ){
-        guvug
-    }
+
+        Text("Login",
+            fontSize = 100.sp,
+            fontWeight = FontWeight.Bold)
+
