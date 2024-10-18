@@ -11,11 +11,13 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -41,64 +43,86 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun BasicColumn(modifier: Modifier = Modifier)  {
+fun BasicColumn(modifier: Modifier = Modifier) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Top,
         modifier = Modifier
             .fillMaxSize()
             .padding(top = 30.dp)
-    ){
+    ) {
 
-        Text("Login",
+        Text(
+            "Login",
             fontSize = 100.sp,
-            fontWeight = FontWeight.Bold)
-        Spacer(modifier =Modifier.padding(2.dp))
+            fontWeight = FontWeight.Bold
+        )
+        Spacer(modifier = Modifier.padding(2.dp))
         Text("ini adalah halaman login",
             fontSize = 20.sp,
-            fontStyle = FontWeight.ExtraBold)
+            fontWeight = FontWeight.ExtraBold)
         Spacer(modifier = Modifier.padding(5.dp))
 
         Image(
-            painter = painterResource(id = R.drawable.logo),
+            painter = painterResource(id = R.drawable.logoumy),
             contentDescription = "",
             modifier = Modifier
                 .size(200.dp)
-                )
+        )
         Spacer(modifier = Modifier.padding(2.dp))
-        Text( "Nama",
-            fontSize = 20.sp,
-        )
+        Text(
+            "Nama",
+            fontSize = 20.sp,)
 
-        Text("Naufal Ichwan Bayazid",
-            fontSize = 20.sp
-        )
-
+        Text(
+            "Naufal Ichwan Bayazid",
+            fontSize = 20.sp)
         Spacer(modifier = Modifier.padding(5.dp))
         Image(
-            Painter = painterResource(id = R.drawable.)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            painter = painterResource(id = R.drawable.fotoaye),
+            contentDescription = "",
+            modifier = Modifier
+                .size(500.dp)
+                .clip(CircleShape)
+                .padding(4.dp)
+        )
 
     }
 }
+
+@Preview(showBackground = true)
+@Composable
+fun GreatingPreview(){
+    TugasBasicComposeTheme {
+        BasicColumn()
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
